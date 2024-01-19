@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/SeungHyun1207/React-TicTacToe-Project/static/css/main.58b0786d.css",
+    "main.js": "/SeungHyun1207/React-TicTacToe-Project/static/js/main.1f5e11c0.js",
+    "static/js/787.1e48cc4a.chunk.js": "/SeungHyun1207/React-TicTacToe-Project/static/js/787.1e48cc4a.chunk.js",
+    "index.html": "/SeungHyun1207/React-TicTacToe-Project/index.html",
+    "main.58b0786d.css.map": "/SeungHyun1207/React-TicTacToe-Project/static/css/main.58b0786d.css.map",
+    "main.1f5e11c0.js.map": "/SeungHyun1207/React-TicTacToe-Project/static/js/main.1f5e11c0.js.map",
+    "787.1e48cc4a.chunk.js.map": "/SeungHyun1207/React-TicTacToe-Project/static/js/787.1e48cc4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58b0786d.css",
+    "static/js/main.1f5e11c0.js"
+  ]
+}
