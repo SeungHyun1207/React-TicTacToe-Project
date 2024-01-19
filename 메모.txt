@@ -1,0 +1,88 @@
+// const [name,setName] = useState()
+    // name = get, 첫번째 인수 이름 / setName = set, 두번째 인수 State를 정하는 함수 
+    // useState() 
+
+    // const status = `Next player ${xIsNext ? 'player1' : 'player2'} `
+
+    /* // new Square(props) = constructor(props)
+    constructor(props) {
+        // this.state 하기 전에 super가 먼저 나와야 하는 이유
+        // >>> 부모 클래스으ㅢ 생성자를 호출하기 전에 this를 사용하려고 하면 문제가 되기 때문이다.
+
+        // super에 props를 인자로 전달하는 이유
+        // >>> 컴포넌트 객체가 생성될 때 props 속성을 초기화하기 위해 부모 컴포넌트에게 props를 전달
+        // >>> 생성자 내부에서도 this.props를 정상적으로 사용할 수 있또록 보장하기 위해서
+        super(props);
+        this.state = {
+            // 개수가 계속 다르다면 i도 되나?
+            squares: Array(9).fill(null)
+        }
+    } */
+
+    // 함수
+    // const handleClick = (i) => {
+    //     const newSquares = squares.slice();
+
+    //     // 게임 끝내기
+    //     if (calculateWinner(newSquares) || newSquares[i]) {
+    //         alert('Game Over');
+    //         return;
+    //     }
+
+    //     newSquares[i] = xIsNext ? 'X' : '0';
+    //     setSquares(newSquares);
+    //     setXIsNext(prev => !prev);
+    // }
+
+    // 함수에서 return 할 때, 컴포넌트를 호출하면서 value값을 줄때 이름은 상관없다.
+    // Square Page에서 {this.props.지정한 ValueName}을 주면 된다.
+
+
+용어 : 전개 연산자 (Spread Operator)
+>> ECMAScript6(2015) 에 새롭게 추가되었으며,
+배열의 요소나 객체를 나열해주는 연산자이다.
+여러개의 배열이나 객체를 손쉽게 병합할 수 있다.
+특정 객체, 또는 배열의 값을 다른 객체, 배열로 복제하거나 옮길 때 사용한다.
+연산자의 모양은 ... 이다.
+
+사용법
+배열일 경우
+변수 = [...변수명]
+
+객체일 경우
+변수 = {...변수명}
+
+
+
+예제를 들자면
+let leftArr = [1,2,3,4,5]
+let rightArr = [6,7,8,9,10]
+leftArr.push(...rightArr);
+console.log(leftArr); > [1,2,3,4,5,6,7,8,9,10]이 나온다.
+
+또 하나의 예제를
+let sum = function(a,b,c){
+    return a+b+c;
+}
+let arr = [1,10,100];
+console.log(sum(arr[0],arr[1],arr[2])); // 전개연산자 미사용시
+console.log(sum(...arr));               // 전개연산자 사용시
+
+용어 
+Array.prototype.map()
+map() 메서드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
+
+JSX key 속성
+리액트에서 여러가지 HTML 엘리먼트들을 표시할 때
+map()함수를 이용하는데, 이 때 key JSX 속성을 넣지 않는다면,
+콘솔에 경고가 표시된다.
+
+key속성이 필요한 이유
+리액트는 상태가 변할 때마다 render()라는 함수를 호출하는데
+이 함수는 새로운 리액트 요소 트리를 반환하게 되고, 기존과 비교하여
+새로운 변경점에 대해서만 재렌더링하게되는데
+이것을 비교하기 위해서 key속성을 사용하는 것이다.
+
+물론 key를 생략해도 되지만
+어떤 항목을 변경,추가,삭제할지에 대한 식별을 돕고,
+안정적인 고유성을 부여하기 위해 지정해주는것이 좋다.
